@@ -41,7 +41,6 @@
             this.TempoText = new System.Windows.Forms.Label();
             this.txtJuros = new System.Windows.Forms.TextBox();
             this.JurosText = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.btnCalcular = new System.Windows.Forms.Button();
             this.btnNovo = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -83,6 +82,7 @@
             this.cbOpcoes.Name = "cbOpcoes";
             this.cbOpcoes.Size = new System.Drawing.Size(259, 24);
             this.cbOpcoes.TabIndex = 2;
+            this.cbOpcoes.SelectedIndexChanged += new System.EventHandler(this.cbOpcoes_SelectedIndexChanged);
             // 
             // txtMontante
             // 
@@ -174,15 +174,6 @@
             this.JurosText.TabIndex = 15;
             this.JurosText.Text = "Juros:";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // btnCalcular
             // 
             this.btnCalcular.BackColor = System.Drawing.Color.Yellow;
@@ -205,6 +196,7 @@
             this.btnNovo.TabIndex = 18;
             this.btnNovo.Text = "Novo";
             this.btnNovo.UseVisualStyleBackColor = false;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // Form1
             // 
@@ -213,7 +205,6 @@
             this.ClientSize = new System.Drawing.Size(836, 555);
             this.Controls.Add(this.btnNovo);
             this.Controls.Add(this.btnCalcular);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.JurosText);
             this.Controls.Add(this.txtJuros);
             this.Controls.Add(this.TempoText);
@@ -249,7 +240,6 @@
         private System.Windows.Forms.Label TempoText;
         private System.Windows.Forms.TextBox txtJuros;
         private System.Windows.Forms.Label JurosText;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnCalcular;
         private System.Windows.Forms.Button btnNovo;
     }
